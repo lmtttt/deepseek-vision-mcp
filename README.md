@@ -135,11 +135,6 @@ deepseek-vision-mcp/
 5. POST /api/v0/chat/completion           → Vision 模型分析 (需要 curl_cffi TLS指纹)
 ```
 
-关键难点：
-- **`fork_file_task`** 将 OCR 处理后的文件转为视觉模型可用格式，是核心缺失步骤
-- **HIF 签名** (`x-hif-leim`, `x-hif-dliq`) 是从独立服务获取的请求签名，缺少会报 `unsupported_client_by_model`
-- **TLS 指纹** 使用 `curl_cffi` 的 `impersonate='chrome131'` 模拟真实浏览器
-
 ## License
 
 MIT
